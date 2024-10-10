@@ -26,7 +26,7 @@ int main(){//sem tipo
   
   //deu certo?
   if(s==NULL){
-    print("Erro de alocação/n");
+    print("Erro de alocação\n");
     return 1;
   }
 
