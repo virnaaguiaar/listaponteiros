@@ -5,7 +5,7 @@ int main(){
   printf("QUANTOS VETORES: ");
   scanf("%d", &qt);
 
-  float *valores = (float *)malloc(qt* sizeof(float);
+  float *valores = (float *)malloc(qt* sizeof(float));
   for(int i=0; i<qt; i++){
     printf("Número %d: "), i+1;
     scanf("%f", &valores[i]);
