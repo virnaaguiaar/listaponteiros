@@ -27,17 +27,16 @@ int main() {
     
     // Ler os valores
     for(int i=0; i<qt; i++){ //estrutura de repetição para pedir cada valor ao usuário
-        printf("Número %d: "), i+1;
-        scanf("%f", &valores[i]); //pedi
+        scanf("%f", &valores[i]); //pedir cada valor
     }
     
-    // Ordenar os valores
-    qsort(valores, qt, sizeof(float), comparar);
+    
+    qsort(valores, qt, sizeof(float), comparar); // Ordenar os valores
 
 
     printf("Ordem crescente:\n");
-    for(int i=0; i<qt; i++){
-        printf("%2f ", valores[i]);
+    for(int i=0; i<qt; i++){ //estrutura de repetição para mostrar cada valor ao usuário em ordem
+        printf("%2f ", valores[i]); //estrutura de repetição para pedir cada valor ao usuárioimprime o valor em ordem
     }
     printf("\n");
     free(valores); //liberar memória
