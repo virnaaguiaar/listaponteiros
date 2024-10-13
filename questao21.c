@@ -1,28 +1,29 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-// Função de comparação para ordenar em ordem crescente
-int comparar(const void *a, const void *b) {
+
+int comparar(const void *a, const void *b) { // Função de comparação para ordenar em ordem crescente
     return (*(int*)a - *(int*)b); // Retorna a diferença entre os dois inteiros
 }
 
 // Função para ordenar um array de inteiros
 void ordenar(int *matriz, int qt, int (*compar)(const void*, const void*)) {
+                                        //ponteiro para a função de comparação
     for (int i = 0; i < qt - 1; i++) {
-        for (int j = 0; j < qt - i - 1; j++) {
-            // Usa a função de comparação para decidir se deve trocar os elementos
+        for (int j = 0; j < qt - i - 1; j++) { //percorre os elmentos do array
+            // usar função de comparação para decidir se deve trocar os elementos
             if (compar(&matriz[j], &matriz[j + 1]) > 0) {
                 // Troca os elementos
-                int temp = matriz[j];
+                int k = matriz[j];
                 matriz[j] = matriz[j + 1];
-                matriz[j + 1] = temp;
+                matriz[j + 1] = k;
             }
         }
     }
 }
 
 int main() {
-    int qt;
+    int qt; //número de elementos no array
 
     // Ler o número de inteiros
     printf("QUANTOS VALORES:  ");
