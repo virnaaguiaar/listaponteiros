@@ -21,7 +21,7 @@ int main() {
 
     
     if (valores == NULL) { // Verificar se a alocação foi bem-sucedida
-      // printf("Erro na alocação de memória.\n"); mensagem de erro de alocação
+      printf("Erro na alocação de memória.\n"); //mensagem de erro de alocação
       return 1; // Retorna um erro
     }
     
