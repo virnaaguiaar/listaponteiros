@@ -6,38 +6,41 @@
 #include <stdlib.h>
 
 // Função de comparação para qsort
-
 int comparar(const void *a, const void *b) {
     return (*(float*)a > *(float*)b) - (*(float*)a < *(float*)b); // Se *a for maior que *b, retorna 1 (a depois de b)
 }                                                                // Se *a for menor que *b, retorna -1 (a antes de b)
 
 int main() {
-    int n;
+   
+    int qt; //iniciar a variável para o número de valores que o usuário que colocar em ordem
+    printf("QUANTOS VETORES: ");
+    scanf("%d", &qt); // Ler o número de valores
 
-    // Ler o número de valores
-    printf("Digite o número de valores: ");
-    scanf("%d", &n);
+    
+    float *valores = (float *)malloc(qt* sizeof(float)); // Alocar memória para os valores
 
-    // Alocar memória para os valores
-    float *valores = (float*)malloc(n * sizeof(float));
-
+    
+    if (valores == NULL) { // Verificar se a alocação foi bem-sucedida
+      // printf("Erro na alocação de memória.\n"); mensagem de erro de alocação
+      return 1; // Retorna um erro
+    }
+    
     // Ler os valores
-    for (int i = 0; i < n; i++) {
-        printf("Digite o valor %d: ", i + 1);
-        scanf("%f", &valores[i]);
+    for(int i=0; i<qt; i++){ //estrutura de repetição para pedir cada valor ao usuário
+        printf("Número %d: "), i+1;
+        scanf("%f", &valores[i]); //pedi
     }
-
+    
     // Ordenar os valores
-    qsort(valores, n, sizeof(float), comparar);
+    qsort(valores, qt, sizeof(float), comparar);
 
-    // Exibir os valores ordenados
-    printf("Valores em ordem crescente:\n");
-    for (int i = 0; i < n; i++) {
-        printf("%.2f\n", valores[i]);
+
+    printf("Ordem crescente:\n");
+    for(int i=0; i<qt; i++){
+        printf("%2f ", valores[i]);
     }
-
-    // Liberar memória
-    free(valores);
+    printf("\n");
+    free(valores); //liberar memória
 
     return 0;
 }
