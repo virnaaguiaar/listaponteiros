@@ -7,15 +7,15 @@ int comparar(const void *a, const void *b) {
 }
 
 // Função para ordenar um array de inteiros
-void ordenar(int *array, int tamanho, int (*compar)(const void*, const void*)) {
-    for (int i = 0; i < tamanho - 1; i++) {
-        for (int j = 0; j < tamanho - i - 1; j++) {
+void ordenar(int *matriz, int qt, int (*compar)(const void*, const void*)) {
+    for (int i = 0; i < qt - 1; i++) {
+        for (int j = 0; j < qt - i - 1; j++) {
             // Usa a função de comparação para decidir se deve trocar os elementos
-            if (compar(&array[j], &array[j + 1]) > 0) {
+            if (compar(&matriz[j], &matriz[j + 1]) > 0) {
                 // Troca os elementos
-                int temp = array[j];
-                array[j] = array[j + 1];
-                array[j + 1] = temp;
+                int temp = matriz[j];
+                matriz[j] = matriz[j + 1];
+                matriz[j + 1] = temp;
             }
         }
     }
@@ -25,7 +25,7 @@ int main() {
     int qt;
 
     // Ler o número de inteiros
-    printf("Quantos inteiros deseja ordenar? ");
+    printf("QUANTOS VALORES:  ");
     scanf("%d", &qt);
 
     // Alocar memória para os inteiros
