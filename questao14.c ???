@@ -2,28 +2,6 @@
 
 int f(int a, int *pb, int **ppc) {
     int b, c;
-    **ppc += 1; 
-    c = **ppc; 
-    *pb += 2; 
-    b = *pb;
-    a += 3;  
-    return a + b + c; // Erro: a deve ser uma variável inteira
-}
-
-void main() { // Corrigido para int main
-    int c, *b, **a;
-    c = 5;      
-    b = &c;      
-    a = &b;     
-    printf("%d\n", f(c, b, a)); 
-    getchar();
-}
-
-//SUGESTÃO
-#include <stdio.h>
-
-int f(int a, int *pb, int **ppc) {
-    int a, b, c;
     **ppc += 1; // Incrementa o valor que ppc aponta (c)
     c = **ppc;  // Atribui o novo valor de c a c
     *pb += 2;   // Incrementa o valor de b (c) em 2
@@ -32,12 +10,12 @@ int f(int a, int *pb, int **ppc) {
     return a + b + c; // Erro: a deve ser uma variável inteira
 }
 
-int main() { // Corrigido para int main
+void main() { // Corrigido para int main
     int c, *b, **a;
     c = 5;       // c é inicializado como 5
-    b = &c;      // b aponta para c
-    a = &b;      // a aponta para b
+    b = &c;      // b aponta para o endereço de c
+    a = &b;      // a aponta para o endereço de b
     printf("%d\n", f(c, b, a)); // Chama a função f e imprime o resultado
     getchar();
-    return 0; // Retorno adequado da função main
 }
+    
