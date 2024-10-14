@@ -37,7 +37,7 @@ int main() { // Corrigido para int main
     c = 5;       // c é inicializado como 5
     b = &c;      // b aponta para c
     a = &b;      // a aponta para b
-    printf("%d\n", f(&c, &b, &a)); // Chama a função f e imprime o resultado
+    printf("%d\n", f(c, b, a)); // Chama a função f e imprime o resultado
     getchar();
     return 0; // Retorno adequado da função main
 }
