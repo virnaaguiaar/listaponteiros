@@ -30,12 +30,15 @@ int main(){
 
 // A respeito das funções implementadas, avalie as afirmações a seguir.
 // I. O resultado da impressão na linha 24 é: 7 - 7.
+                       // verdadeiro
 // II. A função funcao1(), no pior caso, é uma estratégia mais rápida do que a função funcao2().
+                       // o pior caso seria um vetor com muitos valores, o que é mais estratégico o uso da funcao2; 
 // III. A função funcao2() implementa uma estratégia iterativa na concepção do algoritmo.
+                       // implementa uma estratégia recursiva
   // É correto o que se afirma em:
-  // a. I, apenas.
+  // a. I, apenas. //resposta
   // b. III, apenas.
-  // c. I e II, apenas.
+  // c. I e II, apenas. 
   // d. II e III, apenas.
   // e. I, II e III.
   // Justifique sua resposta.
