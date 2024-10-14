@@ -22,14 +22,13 @@ void main() { // Corrigido para int main
 //SUGESTÃO
 #include <stdio.h>
 
-int f(int *pa, int **pb, int ***ppc) {
+int f(int a, int *pb, int **ppc) {
     int a, b, c;
-    ***ppc += 1; // Incrementa o valor que ppc aponta (c)
-    c = ***ppc;  // Atribui o novo valor de c a c
-    **pb += 2;   // Incrementa o valor de b (c) em 2
-    b = **pb;    // Atribui o novo valor de b a b
-    *pa +=3;
-    a = *pa;
+    **ppc += 1; // Incrementa o valor que ppc aponta (c)
+    c = **ppc;  // Atribui o novo valor de c a c
+    *pb += 2;   // Incrementa o valor de b (c) em 2
+    b = *pb;    // Atribui o novo valor de b a b
+    a +=3;
     return a + b + c; // Erro: a deve ser uma variável inteira
 }
 
