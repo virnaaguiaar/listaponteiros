@@ -6,15 +6,15 @@ void main(){
 }
 
 
-possui erro de compilaçao
-primeiramente, em C não se pode atribuir diretamente um valor inteiro a um ponteiro;
-em segundo, o programa quebraria pois nao se pode incrementar um valor constante.
+// possui erro de compilaçao
+// primeiramente, em C não se pode atribuir diretamente um valor inteiro a um ponteiro;
+// em segundo, o programa quebraria pois nao se pode incrementar um valor constante.
 
 
-  sujestão:
-  #include <stdio.h>
-  int main(){
-    int x=3;
-    printf("%d", ++x);
-    return 0;
-  }
+//   sujestão:
+//   #include <stdio.h>
+//   int main(){
+//     int x=3;
+//     printf("%d", ++x);
+//     return 0;
+//   }
