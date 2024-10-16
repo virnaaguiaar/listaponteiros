@@ -14,6 +14,6 @@ int main(){
   printf ("%d %d %d\n", x, y, z);
   return 0;
 }
-Após a chamada desse programa, caso o usuário entre com os valores 10 e 1, nessa ordem, qual
-será, exatamente, o valor da saída do programa? Explique, PASSO-A-PASSO, os cálculos
-realizados pelo programa para chegar a esse resultado
+// Após a chamada desse programa, caso o usuário entre com os valores 10 e 1, nessa ordem, qual
+// será, exatamente, o valor da saída do programa? Explique, PASSO-A-PASSO, os cálculos
+// realizados pelo programa para chegar a esse resultado
