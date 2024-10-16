@@ -25,4 +25,8 @@ int main(void){
 // i = 3 vet[3] = 4.4 *(f + 3) = 4.4 &vet[3] = 0x7ffeed0c0a2c (f + 3) = 0x7ffeed0c0a2c
 // i = 4 vet[4] = 5.5 *(f + 4) = 5.5 &vet[4] = 0x7ffeed0c0a30 (f + 4) = 0x7ffeed0c0a30
 
+//Os valores impressos de vet[i] e *(f + i) são iguais porque f é um ponteiro que aponta para vet, então
+    //ambos acessam o mesmo local de memória.
+
 //como pode-se notar os endereços de memória da posição i do vetor e do ponteiro f na posição i são iguais
+    // f + i calcula o endereço do elemento i no vetor, assim como &vet[i].
