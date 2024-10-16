@@ -79,7 +79,6 @@ int main() {
   
   
   
-  
   /* (i) */
   p5 = p4 + 1;     // o caractere atualizado por último foi vetor[0] => &vetor[0] + 1 = &vetor[1] => '45'
   idade = *p5;
@@ -87,8 +86,7 @@ int main() {
   
   
   
-  
-  /* (j) */ (????????? é pegadinha ?????????)
+  /* (j) */ 
   p4 = p5 + 1;   //novo valor para 'p4' => &vetor[1] + 1 = &vetor[2] => '27'
   idade = *p4;
   printf("%d \n", idade);
@@ -102,13 +100,11 @@ int main() {
   
   
   
-  
-  /* (m) */ (????????? é pegadinha ?????????)
+  /* (m) */ 
   p5 = &vetor[2] - 1;  //novo valor para 'p5' => &vetor[2] - 1 = &vetor[1] => '45'
   printf("%d \n", *p5);
   
-  
-  
+   
   
   /* (n) */
   p5++;   //novo valor para 'p5' => &vetor[1] + 1 = &vetor[2] => '27'
