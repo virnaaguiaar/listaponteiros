@@ -29,7 +29,7 @@ main(){//sem tipo
 
 
 //   //inicializar
-//   s -> x=3;
+//   s -> x=3; // *s.x
 //   strcpy(s->nome, "jose"); //copia a string p o nome
   
 //   printf("%d", s->x);
